@@ -1,0 +1,42 @@
+.nav{
+    position:fixed;
+    top:0;
+    padding:20px;
+    width:100%;
+    height:70px;
+    z-index:1;
+
+    /* animations */
+    transition-timing-function:ease-in;
+    transition:all 0.5s;
+}
+.nav__content{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: 70px;
+    
+}
+
+.nav__logo{
+    position:fixed;
+    left:0px;
+    width:120px;
+   
+    cursor:pointer;
+    object-fit:contain;
+    padding-left:20px;
+}
+.nav__black{
+    background-color:#111;
+}
+.nav__avatar{
+    position:fixed;
+    right:10px;
+    height: 30px;
+}
+
+.nav__avatar:hover{
+    transform:scale(1.05);
+    transition:all 0.5s;
+}
