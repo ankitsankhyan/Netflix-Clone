@@ -11,7 +11,7 @@ function Homescreen() {
         <Banner />
       <Row 
       title='NetFlix Originals'
-      fetchUrl = {requests.fetchNetflixOriginals}/>
+      fetchUrl = {requests.fetchNetflixOriginals} isLargeRow = {true}/>
       <Row 
       title='Trending Now'
       fetchUrl = {requests.fetchTrending}/>
