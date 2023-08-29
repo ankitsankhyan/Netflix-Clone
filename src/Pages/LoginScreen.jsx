@@ -1,6 +1,11 @@
 import React from 'react'
 import './LoginScreen.css'
+import { useState } from 'react';
+import SignInScreen from './SignInScreen';
 function LoginScreen() {
+  const [signIn, setSignIn] = useState(true);
+
+
   return (
     <div className='loginScreen'>
       <div className="loginScreen__background">
@@ -13,9 +18,19 @@ function LoginScreen() {
       </div>
 
       <div className="loginScreen__body">
-        <><h1>Unlimited files, TV programmes and more</h1>
-        <h2>Watch anywhere. Cancel at any time</h2>
-        <h3>Ready to watch? Enter your email to create or restart your membership</h3></>
+        {signIn ? (
+          <SignInScreen /> ):(
+            <><h1>Unlimited files, TV programmes and more</h1>
+            <h2>Watch anywhere. Cancel at any time</h2>
+            <h3>Ready to watch? Enter your email to create or restart your membership</h3>
+            <div className="loginScreen__input">
+              <form action="">
+                <input type="email" placeholder='Enter Email' />
+                <button className="loginScreen__getStarted">GET STARTED</button>
+              </form>
+            </div>
+            </>
+          )}
          
       </div>
     </div>
