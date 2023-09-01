@@ -3,11 +3,11 @@ import Homescreen from './Pages/Homescreen';
 import './App.css';
 import {  Routes, Route } from 'react-router-dom';
 import LoginScreen from './Pages/LoginScreen';
-import { auth, onAuthStateChanged } from './firebase';
+import { auth, onAuthStateChanged } from './auth/firebase';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout , login ,selectUser} from './features/userSlice';
+import { logout , login ,selectUser} from './Slices/userSlice';
 function App() {
-  const user = useSelector(selectUser);
+  const user = 'a';
   const dispatch = useDispatch();
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {

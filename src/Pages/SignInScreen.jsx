@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { auth , createUserWithEmailAndPassword, signInWithEmailAndPassword} from '../firebase';
+import { auth , createUserWithEmailAndPassword, signInWithEmailAndPassword} from '../auth/firebase';
 
 import './SignInScreen.css'
 function SignIn() {
