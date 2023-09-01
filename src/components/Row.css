@@ -1,6 +1,7 @@
 .row{
     color:white;
     margin-left:20px;
+    margin-top:10px;
 }
 
 .row__posters{
@@ -13,7 +14,7 @@
     display:none;
 }
 .row__poster{
-    max-height:100px;
+    max-height:150px;
     object-fit:contain;
     margin-right:10px;
     width:100%;
@@ -27,5 +28,11 @@
 }
 
 .row__posterLarge{
-    max-height:250px;
+    max-height:400px;
+}
+
+@media(max-width:280px){
+     .row>h2{
+        font-size:1.6rem;
+     }
 }
