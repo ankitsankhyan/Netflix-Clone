@@ -6,10 +6,13 @@ import ProfileScreen from './Pages/ProfileScreen';
 import {  Routes, Route } from 'react-router-dom';
 import LoginScreen from './Pages/LoginScreen';
 import { auth, onAuthStateChanged } from './auth/firebase';
+import { selectUser } from './Slices/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout , login ,selectUser} from './Slices/userSlice';
+import { logout , login } from './Slices/userSlice';
 function App() {
- const user = useSelector(selectUser);
+  const user = useSelector(selectUser);
+  console.log(user, '122  s');
+   console.log('app is running');
   const dispatch = useDispatch();
   const navigate = useNavigate();
   useEffect(() => {
@@ -20,24 +23,25 @@ function App() {
           uid:user.uid,
           email:user.email,
         }));
-        console.log(user,'user is logged in');
+       localStorage.setItem('user', JSON.stringify(user));
         navigate('/home');
       } else {
         console.log("user is logged out");
         dispatch(logout());
       }
+      
     })
-    // cleanup function
-  
+    // cleanup function 
+   
     return unsubscribe;
-  }, [dispatch])
+  }, [])
   return (
     <div className="App">
        <Routes>
-       <Route path="/profile" element = {<ProfileScreen/>} />
-          <Route path="/home" element={<Homescreen/>} />
-          <Route path="/" element={<LoginScreen/>} />
-        <Route path="*" element={<h1 style={{'color':'white'}}>404 Not Found</h1>} />
+       <Route exact path="/profile" element = {<ProfileScreen/>} />
+       <Route exact path="/home" element={<Homescreen/>} />
+       <Route exact path="/" element={<LoginScreen/>} />
+       <Route path="*" element={<h1 style={{'color':'white'}}>404 Not Found</h1>} />
       
         </Routes>
     </div>

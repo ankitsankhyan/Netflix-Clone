@@ -1,5 +1,6 @@
 import {  createSlice } from '@reduxjs/toolkit';
 
+const initialUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
 
 
 
@@ -7,7 +8,7 @@ import {  createSlice } from '@reduxjs/toolkit';
 export const userSlice = createSlice({
   name: 'user',
   initialState:{
-    user:null,
+    user: initialUser|| null,
   },
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {

@@ -5,11 +5,28 @@
     object-fit:contain;
     background-color:black;
 }
+.banner::after{
+  
+    content:"";
+    background-size:cover;
+    background-position:center;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+   
+   background-color:rgba(0,0,0,0.2);
+    z-index:0;
+     pointer-events: none;
+   
+}
 
 .banner__contents{
+    position:relative;
     margin-left:30px;
     padding-top:140px;
-    
+    z-index:2;
     height:190px;
 }
 
@@ -17,6 +34,7 @@
     font-size:3rem;
     font-weight:800;
     padding-bottom:0.3rem;
+    z-index:2;
     
 }
 
@@ -27,6 +45,7 @@
     font-size:0.8rem;
     padding-top:1rem;
     height:80px;
+    z-index:2;
 
 }
 

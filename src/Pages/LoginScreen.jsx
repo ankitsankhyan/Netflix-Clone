@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './LoginScreen.css'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -6,12 +6,15 @@ import { useSelector } from 'react-redux';
 import { selectUser } from '../Slices/userSlice';
 import SignInScreen from './SignInScreen';
 function LoginScreen() {
+  console.log('login screen');
   const [signIn, setSignIn] = useState(true);
   const navigate = useNavigate();
   const user = useSelector(selectUser);
- if(user){
-  navigate('/home');
- }
+   useEffect(() => {
+    if(user){
+      navigate('/home');
+     }
+    }, [user, navigate]);
   return (
     <div className='loginScreen'>
       <div className="loginScreen__background">
