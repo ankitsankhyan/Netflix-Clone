@@ -8,12 +8,14 @@ function SignIn() {
   const passwordRef = useRef(null);
   const register = (e) => {
       e.preventDefault();
+   
       createUserWithEmailAndPassword(
           auth,
           emailRef.current.value,
           passwordRef.current.value
       ).then((authUser) => {
         console.log(authUser);
+        console.log('navigating the user')
        navigate('/');
       }).catch((error) =>{
           alert(error.message); 
@@ -23,7 +25,7 @@ function SignIn() {
      e.preventDefault();
      signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value).then((authUser) => {
       console.log(authUser);
-      navigate('/');
+      navigate('/home');
      }).catch((error) => { 
       console.log(error.message);
      });

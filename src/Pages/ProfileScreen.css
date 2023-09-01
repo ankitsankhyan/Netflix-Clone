@@ -69,13 +69,14 @@
     .profileScreen__info>img{
        display:none;
     }
-
+    
     .profileScreen__details >h2{
         background-color:grey;
         font-size:1rem;
         padding:5px 10px;
-    
+       
     }
+   
   }
 
   @media (min-width:470px){
@@ -99,6 +100,7 @@
         
         font-size:1.2rem;
         padding:8px 15px;
+       
     
     }
   }
