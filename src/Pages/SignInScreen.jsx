@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import { auth , createUserWithEmailAndPassword, signInWithEmailAndPassword} from '../auth/firebase';
-
+import { useNavigate } from 'react-router-dom';
 import './SignInScreen.css'
 function SignIn() {
-
+  const navigate = useNavigate();
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const register = (e) => {
@@ -14,6 +14,7 @@ function SignIn() {
           passwordRef.current.value
       ).then((authUser) => {
         console.log(authUser);
+       navigate('/');
       }).catch((error) =>{
           alert(error.message); 
       })
@@ -22,13 +23,14 @@ function SignIn() {
      e.preventDefault();
      signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value).then((authUser) => {
       console.log(authUser);
+      navigate('/');
      }).catch((error) => { 
       console.log(error.message);
      });
   }
   return (
     <div className='SignupScreen'>
-      <form >
+      <form  >
         <h1>Sign In</h1>
         <input ref={emailRef} type="email" placeholder='Email' />
         <input ref={passwordRef} type="password" placeholder='Password' />
