@@ -1,6 +1,6 @@
 .SignupScreen{
     /* max-width: 300px; */
-    padding:70px;
+   padding:70px;
     margin:auto;
     background:rgba(0,0,0,0.85);
   
@@ -57,4 +57,23 @@
 .signupScreen__link:hover{
     cursor:pointer;
     text-decoration:underline;
+}
+
+@media (max-width:370px){
+    .SignupScreen{
+        padding:20px;
+    }
+    .SignupScreen > form > h1{
+        font-size: 1.2rem;
+    }
+    .SignupScreen > form > input{
+        height:30px;
+    }
+    .SignupScreen > form > button{
+        font-size:0.8rem;
+        padding:10px 15px;
+    }
+    .SignupScreen > h4{
+        font-size:0.8rem;
+    }
 }

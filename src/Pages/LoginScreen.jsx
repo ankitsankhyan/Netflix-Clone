@@ -7,7 +7,7 @@ import { selectUser } from '../Slices/userSlice';
 import SignInScreen from './SignInScreen';
 function LoginScreen() {
   console.log('login screen');
-  const [signIn, setSignIn] = useState(true);
+  const [signIn, setSignIn] = useState(false);
   const navigate = useNavigate();
   const user = useSelector(selectUser);
    useEffect(() => {
@@ -39,7 +39,9 @@ function LoginScreen() {
             <div className="loginScreen__input">
              <form >
              <input type="email" placeholder='Enter Email' />
-                <button className="loginScreen__getStarted">GET STARTED</button>
+                <button className="loginScreen__getStarted" onClick={()=>{
+          setSignIn(true);
+         }}>GET STARTED</button>
              </form>
                
               

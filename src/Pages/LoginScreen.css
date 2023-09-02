@@ -75,7 +75,8 @@
     height:100%;
     width:100%;
  
-   
+     
+
    
   
     
@@ -83,7 +84,6 @@
 .loginScreen__body > h1{
    
     font-size:3.125rem;
-    
     margin-bottom:20px;
 }
 
