@@ -5,28 +5,11 @@
     object-fit:contain;
     background-color:black;
 }
-.banner::after{
-  
-    content:"";
-    background-size:cover;
-    background-position:center;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-   
-   background-color:rgba(0,0,0,0.2);
-    z-index:0;
-     pointer-events: none;
-   
-}
 
 .banner__contents{
-    position:relative;
     margin-left:30px;
     padding-top:140px;
-    z-index:2;
+    
     height:190px;
 }
 
@@ -34,7 +17,6 @@
     font-size:3rem;
     font-weight:800;
     padding-bottom:0.3rem;
-    z-index:2;
     
 }
 
@@ -45,7 +27,6 @@
     font-size:0.8rem;
     padding-top:1rem;
     height:80px;
-    z-index:2;
 
 }
 
@@ -76,18 +57,11 @@
    background-color:#e6e6e6;
    transition:all 0.2s;
 }
-@media (max-width: 280px) {
-    .banner__contents {
-      margin-left:8px;
-    }
-    .banner__title{
-      font-size:2rem;
-    }
-  }
+
 
 .banner--fadeBottom{
     height:10.6rem;
- 
+    
    /* gradient is given from bottom to top */
     background-image:linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
 }

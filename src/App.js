@@ -11,8 +11,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout , login } from './Slices/userSlice';
 function App() {
   const user = useSelector(selectUser);
-  console.log(user, '122  s');
-   console.log('app is running');
+
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
   useEffect(() => {

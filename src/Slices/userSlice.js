@@ -1,7 +1,7 @@
 import {  createSlice } from '@reduxjs/toolkit';
 
 const initialUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
-
+console.log(initialUser);
 
 
 // reducer are the functions that act on the data and change the data on global state
@@ -16,6 +16,7 @@ export const userSlice = createSlice({
       state.user = action.payload;
     },
     logout:(state)=>{
+      localStorage.removeItem('user');
       state.user = null;
     }
   },

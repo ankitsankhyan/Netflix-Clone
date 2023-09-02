@@ -27,22 +27,22 @@ function Homescreen() {
       fetchUrl = {requests.fetchNetflixOriginals} isLargeRow = {true}/>
       <Row 
       title='Trending Now'
-      fetchUrl = {requests.fetchTrending}/>
+      fetchUrl = {requests.fetchTrending} isLargeRow = {true}/>
       <Row 
       title='Top Rated'
-      fetchUrl = {requests.fetchActionMovies}/>
+      fetchUrl = {requests.fetchActionMovies} isLargeRow = {true}/>
       <Row 
       title='Comedy Movies'
-      fetchUrl = {requests.fetchComedyMovies}/>
+      fetchUrl = {requests.fetchComedyMovies} isLargeRow = {true}/>
       <Row 
       title='Horror Movies'
-      fetchUrl = {requests.fetchHorrorMovies}/>
+      fetchUrl = {requests.fetchHorrorMovies} isLargeRow = {true}/>
       <Row 
       title='Romance Movies'
-      fetchUrl = {requests.fetchRomanceMovies}/>
+      fetchUrl = {requests.fetchRomanceMovies} isLargeRow = {true}/>
       <Row 
       title='Documentaries'
-      fetchUrl = {requests.fetchDocumentaries}/>
+      fetchUrl = {requests.fetchDocumentaries} isLargeRow = {true}/>
     
     </div>
   )
